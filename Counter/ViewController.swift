@@ -23,26 +23,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeHistoryTextView.text = "История изменений:\n"
+        changeHistoryTextView.text = "История изменений:\n\n"
     }
     
     @IBAction func plusButtonDidTap() {
         counterValue += 1
-        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на +1\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на +1\n\n"
     }
     
     @IBAction func minusButtonDidTap() {
         guard counterValue > 0 else {
-            changeHistoryTextView.text += "\(getCurrentDate()): попытка уменьшить значение счётчика ниже 0\n"
+            changeHistoryTextView.text += "\(getCurrentDate()): попытка уменьшить значение счётчика ниже 0\n\n"
             return
         }
         counterValue -= 1
-        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на -1\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на -1\n\n"
     }
     
     @IBAction func refreshButtonDidTap() {
         counterValue = 0
-        changeHistoryTextView.text += "\(getCurrentDate()): значение сброшено\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение сброшено\n\n"
     }
     
     private func getCurrentDate() -> String {
