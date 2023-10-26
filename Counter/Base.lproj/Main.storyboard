@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82U-Zv-7hp">
-                                <rect key="frame" x="312" y="461.66666666666669" width="47" height="34"/>
+                                <rect key="frame" x="323" y="461.66666666666669" width="47" height="34"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
                                     <color key="baseForegroundColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
@@ -32,39 +32,51 @@
                                     <action selector="plusButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="D35-ne-DBM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znr-yo-nOu">
-                                <rect key="frame" x="71" y="461.66666666666669" width="47" height="34"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
-                                <connections>
-                                    <action selector="minusButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bs-qH-uVL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxQ-Dg-M9M">
                                 <rect key="frame" x="363" y="79" width="47" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
                                 <connections>
-                                    <action selector="refrashButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="koD-wl-tdc"/>
+                                    <action selector="refreshButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="koD-wl-tdc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-Zw-aWe">
+                                <rect key="frame" x="80" y="541.66666666666663" width="270" height="356.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-N7-jYX">
+                                <rect key="frame" x="60" y="461.66666666666669" width="47" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
+                                <connections>
+                                    <action selector="minusButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="fd6-oq-OJn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="znr-yo-nOu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Oid-nD-dF6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzf-Zw-aWe" secondAttribute="trailing" constant="80" id="7UC-br-Zj5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jzf-Zw-aWe" secondAttribute="bottom" id="A19-hu-Auu"/>
+                            <constraint firstItem="8N3-N7-jYX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="AxW-UG-G9F"/>
+                            <constraint firstItem="jzf-Zw-aWe" firstAttribute="firstBaseline" secondItem="yPG-KL-oaR" secondAttribute="baseline" constant="40" id="D3z-En-Q4P"/>
                             <constraint firstItem="yPG-KL-oaR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OmM-Cn-gwq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="82U-Zv-7hp" secondAttribute="trailing" constant="60" id="P8j-oE-2hY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KxQ-Dg-M9M" secondAttribute="trailing" constant="20" id="aYu-v5-XEl"/>
-                            <constraint firstItem="yPG-KL-oaR" firstAttribute="leading" secondItem="znr-yo-nOu" secondAttribute="trailing" constant="80" id="bjJ-mZ-pez"/>
+                            <constraint firstItem="8N3-N7-jYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="ais-fF-YRC"/>
+                            <constraint firstItem="jzf-Zw-aWe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="cNE-o9-cma"/>
                             <constraint firstItem="82U-Zv-7hp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="f2A-45-bq4"/>
-                            <constraint firstItem="82U-Zv-7hp" firstAttribute="leading" secondItem="yPG-KL-oaR" secondAttribute="trailing" constant="80" id="fKh-F9-WPE"/>
                             <constraint firstItem="yPG-KL-oaR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gqx-OW-MQz"/>
                             <constraint firstItem="KxQ-Dg-M9M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="q4K-dM-qeT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeHistoryTextView" destination="jzf-Zw-aWe" id="bwX-8H-qOS"/>
                         <outlet property="counterLabel" destination="yPG-KL-oaR" id="XwC-Au-3lF"/>
-                        <outlet property="minusButton" destination="znr-yo-nOu" id="JFC-it-EtZ"/>
+                        <outlet property="minusButton" destination="8N3-N7-jYX" id="xMJ-ge-AEf"/>
                         <outlet property="plusButton" destination="82U-Zv-7hp" id="NUe-PL-rMc"/>
                         <outlet property="refreshButton" destination="KxQ-Dg-M9M" id="mXT-0A-i4h"/>
                     </connections>
@@ -78,6 +90,9 @@
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
