@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var changeHistoryTextView: UITextView!
     
-    private var counterValue: Int = 0
+    private var counterValue: Int = 0 {
+        didSet {
+            counterLabel.text = "\(counterValue)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,29 +27,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonDidTap() {
-        let result = getCurrentDate()
         counterValue += 1
-        counterLabel.text = "\(counterValue)"
-        changeHistoryTextView.text += "\(result) значение изменено на +1\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на +1\n"
     }
     
     @IBAction func minusButtonDidTap() {
         guard counterValue > 0 else {
-            let result = getCurrentDate()
-            changeHistoryTextView.text += "\(result) попытка уменьшить значение счётчика ниже 0\n"
+            changeHistoryTextView.text += "\(getCurrentDate()): попытка уменьшить значение счётчика ниже 0\n"
             return
         }
-        let result = getCurrentDate()
         counterValue -= 1
-        counterLabel.text = "\(counterValue)"
-        changeHistoryTextView.text += "\(result) значение изменено на -1\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение изменено на -1\n"
     }
     
     @IBAction func refreshButtonDidTap() {
-        let result = getCurrentDate()
         counterValue = 0
-        counterLabel.text = "\(counterValue)"
-        changeHistoryTextView.text += "\(result) значение сброшено\n"
+        changeHistoryTextView.text += "\(getCurrentDate()): значение сброшено\n"
     }
     
     private func getCurrentDate() -> String {
@@ -57,4 +54,3 @@ class ViewController: UIViewController {
         return dateFormatter.string(from: date)
     }
 }
-
